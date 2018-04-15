@@ -16,8 +16,10 @@ class EmailParser
   #end
 
   def initialize (emails)
-    #new_email=self.new
     @emails=emails
+
+    #Don't need to do all this extra stuff below
+    #new_email=self.new
     #new_email
     #@emails=emails
     #parse(emails)#.save
