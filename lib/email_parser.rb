@@ -4,35 +4,40 @@
 # or whitespace (' ').
 
 class EmailParser
-  #@@all=""
   attr_accessor :emails
 
-  #def self.all
-    #@@all
-  #end
-
-  #def save
-    #self.class.all << self
-  #end
-
   def initialize (emails)
-    #new_email=self.new
     @emails=emails
+
+    #Don't need to do all this extra stuff below
+    #new_email=self.new
     #new_email
     #@emails=emails
     #parse(emails)#.save
     #@email_address=emails
-    #@@all<<self
   end
 
   def parse
 
+    #First split email addresses by space
+    #then "split" by comma which effectively removes the comma
+    #then "join" the "array" back into a string
+    #then return the email_array with only unique values
     email_array=@emails.split(" ").collect do |email|#.uniq
       email.split(",").join
     end
     email_array.uniq
 
+    #Tried to use if/else statements but one email string
+    #separates email addresses by commas and spaces so 
+    #code below doesn't work
+    #if @emails.include? ", "
+      #@emails.split(", ").collect {|email| email}
+    #else
+      #@emails.split(" ").collect {|email| email}
+    #end
 
+    #Code that didn't work
     #rows=@emails.split(" ")
     #rows=@@all.split(" ")
     #people=rows.collect do |row|
