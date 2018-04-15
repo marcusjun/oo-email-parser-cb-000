@@ -24,7 +24,7 @@ class EmailParser
     end
     email_array.uniq
 
-
+    #Code that didn't work
     #rows=@emails.split(" ")
     #rows=@@all.split(" ")
     #people=rows.collect do |row|
