@@ -25,10 +25,10 @@ class EmailParser
       @emails.split(" ").collect {|email| email}
     end
 
-    email_array=@emails.split(" ").collect do |email|#.uniq
-      email.split(",").join
-    end
-    email_array.uniq
+    #email_array=@emails.split(" ").collect do |email|#.uniq
+      #email.split(",").join
+    #end
+    #email_array.uniq
 
     #Code that didn't work
     #rows=@emails.split(" ")
