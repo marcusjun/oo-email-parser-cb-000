@@ -4,16 +4,7 @@
 # or whitespace (' ').
 
 class EmailParser
-  #@@all=""
   attr_accessor :emails
-
-  #def self.all
-    #@@all
-  #end
-
-  #def save
-    #self.class.all << self
-  #end
 
   def initialize (emails)
     @emails=emails
@@ -24,7 +15,6 @@ class EmailParser
     #@emails=emails
     #parse(emails)#.save
     #@email_address=emails
-    #@@all<<self
   end
 
   def parse
