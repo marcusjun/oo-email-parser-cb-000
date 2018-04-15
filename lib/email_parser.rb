@@ -19,16 +19,21 @@ class EmailParser
 
   def parse
 
-    if @emails.include? ", "
-      @emails.split(", ").collect {|email| email}
-    else
-      @emails.split(" ").collect {|email| email}
-    end
+    
 
-    #email_array=@emails.split(" ").collect do |email|#.uniq
-      #email.split(",").join
+    email_array=@emails.split(" ").collect do |email|#.uniq
+      email.split(",").join
+    end
+    email_array.uniq
+
+    #Tried to use if/else statements but one email string
+    #separates email addresses by commas and spaces so 
+    #code below doesn't work
+    #if @emails.include? ", "
+      #@emails.split(", ").collect {|email| email}
+    #else
+      #@emails.split(" ").collect {|email| email}
     #end
-    #email_array.uniq
 
     #Code that didn't work
     #rows=@emails.split(" ")
