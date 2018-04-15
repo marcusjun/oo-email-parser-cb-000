@@ -19,6 +19,12 @@ class EmailParser
 
   def parse
 
+    if @emails.include? ", "
+      @emails.split(", ").collect {|email| email}
+    else
+      @emails.split(" ").collect {|email| email}
+    end
+
     email_array=@emails.split(" ").collect do |email|#.uniq
       email.split(",").join
     end
