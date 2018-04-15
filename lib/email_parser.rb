@@ -19,8 +19,10 @@ class EmailParser
 
   def parse
 
-    
-
+    #First split email addresses by space
+    #then "split" by comma which effectively removes the comma
+    #then "join" the "array" back into a string
+    #then return the email_array with only unique values
     email_array=@emails.split(" ").collect do |email|#.uniq
       email.split(",").join
     end
